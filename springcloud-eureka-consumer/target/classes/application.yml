@@ -1,0 +1,16 @@
+server:
+    port: 8881
+
+
+# 指定当前eureka客户端的注册地址，也就是eureka服务的提供方，当前配置的服务的注册服务方
+eureka:
+    client:
+        service-url:
+            defaultZone: http://${eureka.instance.hostname}:8888/eureka
+    instance:
+        hostname: localhost
+
+#当前服务名称
+spring:
+    application:
+        name: eureka-consumer
